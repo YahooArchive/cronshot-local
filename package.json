@@ -1,0 +1,36 @@
+{
+  "name": "cronshot-local",
+  "description": "Cronshot middleware to save images locally",
+  "contributors": [
+    {
+      "name": "Greg Franko"
+    },
+    {
+      "name": "Chase West"
+    }
+  ],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahoo/cronshot-local.git"
+  },
+  "keywords": [
+    "cron",
+    "screenshot"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/istanbul/lib/cli.js cover --dir artifacts -- ./node_modules/mocha/bin/_mocha tests/unit/* --recursive --reporter spec"
+  },
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "graceful-fs": "^3.0.4"
+  },
+  "devDependencies": {
+    "chai": "1.x",
+    "istanbul": "0.x",
+    "mocha": "1.x"
+  }
+}

@@ -31,7 +31,7 @@ var cronshot = require('cronshot'),
 cronshot.startCapturing({
   'url': 'http://sports.yahoo.com',
   'path': __dirname,
-  'cronPattern': '',
+  'cronPattern': false,
   'saveMiddleware': [middleware.local],
 }, function(err) {
   // optional callback function once all screenshots have been taken
@@ -57,7 +57,7 @@ If your PR is a code change:
 
 1.  Install all node.js dev dependencies: `npm install`
 2.  Update the appropriate module inside of the `src/modules` directory.
-3.  Add a unit test inside of `tests/unit/cronshot-imagemagick.js`.
+3.  Add a unit test inside of `tests/unit/cronshot-local.js`.
 4.  Verify that all tests are passing by running `npm test`.
 5.  Send the PR!
 

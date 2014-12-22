@@ -45,7 +45,10 @@ cronshot.startCapturing({
 
 ```javascript
 {
-  'overwritePath': true
+  // The path where the screenshot will be saved
+  'path': '',
+  // The image name used to save the screenshot
+  'imageName': ''
 }
 ```
 

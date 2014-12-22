@@ -18,7 +18,6 @@ module.exports = function saveToLocal(obj, callback) {
         writeStream = typeof fullPath === 'string' ? fs.createWriteStream(fullPath) : {
             error: true
         },
-        overwritePath = options.overwritePath || true,
         content = obj.readStream || (pathExists && fs.createReadStream(fullPath)) || false,
         info = {
             'name': 'local'
@@ -31,11 +30,6 @@ module.exports = function saveToLocal(obj, callback) {
         return;
     } else if (!imageName) {
         callback(new Error('The imageName option was not passed'));
-        return;
-    }
-
-    if(!overwritePath && pathExists) {
-        callback(null, info);
         return;
     }
 
